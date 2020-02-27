@@ -6,5 +6,5 @@ install:
 script:
   - flake8 --max-line-length=120 --exclude=__*.py
   - black . --check
-  - pytype ./leoprofanity
+  - pytype -x=**/__main__.py ./leoprofanity/*
   - python -m unittest tests/test_LeoProfanity.py
