@@ -18,7 +18,7 @@ class LeoProfanity:
 
     """
     Returns:
-        List[str] -- Return current profanity words
+        List[str] -- return current profanity words
     """
 
     def list(self) -> List[str]:
@@ -66,7 +66,7 @@ class LeoProfanity:
     """Return word list from dictionary
 
     Arguments
-        name {str, optional} -- dictionary name
+        name {str, optional} -- dictionary name (default is "en")
 
     Returns:
         List[str] -- dictionary word list
@@ -81,13 +81,14 @@ class LeoProfanity:
     """Load word list from dictionary to using in the filter
 
     Arguments
-        name {str, optional} -- dictionary name
+        name {str, optional} -- dictionary name (default is "en")
     """
 
     def load_dictionary(self, name: str = "en") -> None:
         self.words = self.get_dictionary(name)
 
     """Return replacement word from key (private)
+
     Arguments
         key {str}
         n {int}
@@ -145,6 +146,7 @@ class LeoProfanity:
 
     """Check the string contain profanity words or not
     Approach, to make it fast ASAP
+
     Arguments
         string {str}
 
@@ -152,7 +154,7 @@ class LeoProfanity:
         bool
     """
 
-    def check(self, string: str = None) -> bool:
+    def check(self, string: str) -> bool:
         is_found: bool = False
 
         if isinstance(string, str):
@@ -171,12 +173,13 @@ class LeoProfanity:
         return is_found
 
     """Internal proceeding method
+
     Arguments
-        string {str} --
+        string {str}
         replace_key {str, optional} -- one character only (default is '*')
 
     Returns:
-        str
+        List[Any]
     """
 
     def proceed(self, string: str, replace_key: str = "*") -> List[Any]:
@@ -207,6 +210,7 @@ class LeoProfanity:
         return [result, bad_words]
 
     """Replace profanity words
+
     Arguments
         string {str}
         replace_key {str, optional} -- one character only (default is '*')
@@ -223,7 +227,7 @@ class LeoProfanity:
 
     """Get list of used bad/profanity words
     Arguments
-        string {str} --
+        string {str}
 
     Returns:
         List[str]
