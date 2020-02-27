@@ -18,7 +18,7 @@ dev_requirements = [
 setup(
     name="leoprofanity",
     version="0.0.1",
-    description="Python version of leo-profanity, Shutterstock dictionary based filter.",
+    description="Profanity filter, based on Shutterstock dictionary",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/jojoee/leo-profanity-python",
