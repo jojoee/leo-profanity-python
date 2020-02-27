@@ -2,12 +2,8 @@
   "python.linting.enabled": true,
   "python.formatting.provider": "black",
   "editor.formatOnSave": true,
-  "python.formatting.blackArgs": [
-    "--line-length",
-    "120"
-  ],
   "python.linting.flake8Args": [
-    "--max-line-length=120",
+    "--max-line-length=88",
     "--verbose"
   ],
   "python.linting.pylintEnabled": false,

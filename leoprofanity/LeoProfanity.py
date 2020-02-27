@@ -196,7 +196,9 @@ class LeoProfanity:
             # loop through given string
             for index, item in enumerate(sanitized_arr):
                 if item in self.words:
-                    replacement_word: str = self.get_replacement_word(replace_key, len(item))
+                    replacement_word: str = self.get_replacement_word(
+                        replace_key, len(item)
+                    )
                     bad_words.append(result_arr[index])
                     result_arr[index] = replacement_word
 
