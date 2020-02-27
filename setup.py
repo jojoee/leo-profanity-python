@@ -17,7 +17,7 @@ dev_requirements = [
 # This call to setup() does all the work
 setup(
     name="leoprofanity",
-    version="0.0.2",
+    version="0.0.3",
     description="Profanity filter, based on Shutterstock dictionary",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -31,7 +31,7 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     packages=["leoprofanity"],
-    include_package_data=False,
+    package_data={"leoprofanity": ["dictionary/*.json"]},
     install_requires=[],
     extras_require={"dev": dev_requirements},
     entry_points={"console_scripts": ["leoprofanity=leoprofanity.__main__:main"]},

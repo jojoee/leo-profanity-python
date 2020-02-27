@@ -12,7 +12,7 @@ Contact:
 
 Version:
 --------
-- leoprofanity v0.0.2
+- leoprofanity v0.0.3
 """
 
 import sys
