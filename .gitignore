@@ -3,6 +3,7 @@ bk
 
 # Editor && IDE
 .idea
+.vscode
 
 # OS
 .DS_Store
@@ -10,3 +11,6 @@ bk
 # Misc
 __pycache__
 .pytype
+build
+dist
+leoprofanity.egg-info
