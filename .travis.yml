@@ -1,0 +1,10 @@
+sudo: false
+language: python
+python: 3.8
+install:
+  - pip install -e .[dev]
+script:
+  - flake8 --max-line-length=120 --exclude=__*.py
+  - black . --check
+  - pytype ./leoprofanity
+  - python -m unittest tests/test_LeoProfanity.py
