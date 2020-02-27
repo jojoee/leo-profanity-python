@@ -1,5 +1,5 @@
 import json
-from typing import List, Union
+from typing import List, Union, Any
 import logging
 import re
 
@@ -179,7 +179,7 @@ class LeoProfanity:
         str
     """
 
-    def proceed(self, string: str, replace_key: str = "*") -> str:
+    def proceed(self, string: str, replace_key: str = "*") -> List[Any]:
         original_string: str = string
         result: str = string
         bad_words: List[str] = []
