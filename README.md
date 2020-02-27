@@ -1,6 +1,9 @@
 # LeoProfanity
 
 [![Travis](https://img.shields.io/travis/jojoee/leo-profanity.svg)](https://travis-ci.org/jojoee/leo-profanity)
+[![PyPI version fury.io](https://badge.fury.io/py/leoprofanity.svg)](https://pypi.python.org/pypi/leoprofanity/)
+[![PyPI license](https://img.shields.io/pypi/l/leoprofanity.svg)](https://pypi.python.org/pypi/leoprofanity/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/leoprofanity.svg)](https://pypi.python.org/pypi/leoprofanity/)
 
 Python version of [leo-profanity](https://github.com/jojoee/leo-profanity), "Shutterstock" dictionary based filter.
 
@@ -28,8 +31,8 @@ python -m leoprofanity "I have boob"
 from leoprofanity import LeoProfanity
 
 fil = LeoProfanity()
-fil.check("I have BoOb, etc.")
-fil.clean("I have BoOb, etc.")
+fil.check("I have BoOb, etc.") # True
+fil.clean("I have BoOb, etc.") # 'I have ****, etc.'
 ```
 
 ## Contribution
