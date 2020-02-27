@@ -2,6 +2,7 @@ import json
 from typing import List, Union, Any
 import logging
 import re
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -74,7 +75,13 @@ class LeoProfanity:
 
     def get_dictionary(self, name: str = "en") -> List[str]:
         words: List[str] = []
-        with open("./leoprofanity/dictionary/default.json") as json_file:
+
+        current_folder_path = os.path.dirname(os.path.abspath(__file__))
+        dictionary_path = os.path.join(
+            current_folder_path, "dictionary", "default.json"
+        )
+
+        with open(dictionary_path) as json_file:
             words = json.load(json_file)
         return words
 
