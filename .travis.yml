@@ -4,7 +4,7 @@ python: 3.7
 install:
   - pip install -e .[dev]
 script:
-  - flake8 --max-line-length=120 --exclude=__*.py
+  - flake8 --max-line-length=88 --exclude=__*.py
   - black . --check
   - pytype -x=**/__main__.py ./leoprofanity/*
   - python -m unittest tests/test_LeoProfanity.py
