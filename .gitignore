@@ -1,0 +1,12 @@
+# Backup
+bk
+
+# Editor && IDE
+.idea
+
+# OS
+.DS_Store
+
+# Misc
+__pycache__
+.pytype
