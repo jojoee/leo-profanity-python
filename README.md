@@ -30,9 +30,48 @@ python -m leoprofanity "I have boob"
 ```python
 from leoprofanity import LeoProfanity
 
+# example usage
 fil = LeoProfanity()
 fil.check("I have BoOb, etc.") # True
 fil.clean("I have BoOb, etc.") # 'I have ****, etc.'
+
+# return all profanity words (List[str])
+fil.list()
+
+# remove word form the list
+fil.remove_word("boob")
+
+# check whether the string contains profanity word or not
+fil.check("Buy classic watches online") # False
+fil.check("I have BoOb.") # True
+
+# clean or replace profanity word in a string
+fil.clean("I have boob, etc.") # "I have ****"
+fil.clean("I have boob,boob, ass, and etc.") # "I have ****,****, ***, and etc."
+fil.clean("I have boob", "+") # "I have ++++"
+fil.clean("Buy classic watches online") # "Buy classic watches online"
+
+# add new word(s)
+fil.add("b00b")
+fil.add(["b@@b", "b##b"])
+
+# remove word(s) from the list
+fil.remove("boob")
+fil.remove(["boob", "boobs"])
+
+# reset word list by using en dictionary
+fil.reset()
+
+# remove all words inside an existing list
+fil.clear_list()
+
+# return word list from dictionary
+fil.get_dictionary() # returns "en" word list
+fil.get_dictionary("en")
+
+# reset word list by using en dictionary
+fil.load_dictionary()
+fil.load_dictionary("en")
 ```
 
 ## Contribution
