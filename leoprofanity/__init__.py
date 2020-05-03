@@ -6,6 +6,6 @@
 
 # import leoprofanity
 # leoprofanity.__version__
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 
 from leoprofanity.LeoProfanity import LeoProfanity  # noqa: F401
